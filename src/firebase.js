@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyAk_okq8ZD5BZXQrBbTYxYOL49mUdKY9i8",
-  authDomain: "mulesofttshirtdemo.firebaseapp.com",
-  projectId: "mulesofttshirtdemo",
-  storageBucket: "mulesofttshirtdemo.appspot.com",
-  messagingSenderId: "344356210025",
-  appId: "1:344356210025:web:838c4dbb39e335d959a9f8",
-  measurementId: "G-KW5K1QC5TW",
+  apiKey: process.env.APIKEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.ANALYTICS_ID,
 });
 
 export const db = getFirestore(app);
