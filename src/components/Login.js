@@ -66,7 +66,7 @@ var username = "buckRogers";
 var password = "I_l1k3candy";
 var values = [username]; // query values
 
-// query statement to store hash
+// query statement to store hash and protect against SQL injection
 var storeSQL = "UPDATE user_table SET password = $1 WHERE username = $2";
 let lookupSQL = "select password from user_table where username = $1";
 
